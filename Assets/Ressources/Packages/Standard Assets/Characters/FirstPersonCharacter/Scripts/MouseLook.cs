@@ -16,6 +16,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         public float smoothTime = 5f;
         public bool lockCursor = true;
 
+
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
@@ -50,6 +51,48 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 character.localRotation = m_CharacterTargetRot;
                 camera.localRotation = m_CameraTargetRot;
             }
+
+            UpdateCursorLock();
+        }
+
+        public void SetCursorLock(bool value)
+        {
+            lockCursor = value;
+            if(!lockCursor)
+            {//we force unlock the cursor if the user disable the cursor locking helper
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+        }
+
+        public void UpdateCursorLock()
+        {
+            //if the user set "lockCursor" we check & properly lock the cursos
+            if (lockCursor)
+                InternalLockUpdate();
+        }
+
+        private void InternalLockUpdate()
+        {
+            if(Input.GetMouseButtonUp(1))
+            {
+                m_cursorIsLocked = true;
+            }
+            else if(Input.GetMouseButtonDown(1))
+            {
+                m_cursorIsLocked = false;
+            }
+
+            if (m_cursorIsLocked)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+            else if (!m_cursorIsLocked)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
         }
 
         Quaternion ClampRotationAroundXAxis(Quaternion q)
@@ -67,5 +110,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             return q;
         }
+
     }
 }

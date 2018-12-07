@@ -17,7 +17,6 @@ public class UseInitiatorScript : MonoBehaviour {
 	{
 		distanceToObj = -1;
 		Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
-        Cursor.visible = true;
 	}
 	
 	void Update () 
