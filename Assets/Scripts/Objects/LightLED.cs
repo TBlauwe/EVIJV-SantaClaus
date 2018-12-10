@@ -6,15 +6,14 @@ public class LightLED : MonoBehaviour {
 
     public List<Color> colors = new List<Color>(); // List of colors to be displayed one at a time
     public float delay = 1.0f; // Time per color
+    public int startingIndex = 0;
 
     private Material material;
     private Light light;
     private float lastSwitch;
-    private int index;
 
 	// Use this for initialization
 	void Start () {
-        index       = Random.Range(0, colors.Count);
         material    = GetComponent<Renderer>().material;
         light       = GetComponent<Light>();
         switchColor();
@@ -28,12 +27,12 @@ public class LightLED : MonoBehaviour {
 
     private void switchColor()
     {
-        if (index >= colors.Count)
-            index = 0;
-        Color color = colors[index];
+        if (startingIndex >= colors.Count)
+            startingIndex = 0;
+        Color color = colors[startingIndex];
         material.SetColor("_Color", color);
         light.color = color;
-        index++;
+        startingIndex++;
 
         lastSwitch = Time.time;
     }
