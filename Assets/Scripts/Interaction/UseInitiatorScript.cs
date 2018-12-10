@@ -21,61 +21,61 @@ public class UseInitiatorScript : MonoBehaviour {
 	
 	void Update () 
 	{
-		// Le raycast attache un objet cliqué
-		RaycastHit hitInfo;
-		Ray ray = GetComponentInChildren<Camera>().ScreenPointToRay(Input.mousePosition);
-		Debug.DrawRay (ray.origin, ray.direction * RAYCASTLENGTH, Color.blue);
-		bool rayCasted = Physics.Raycast (ray, out hitInfo, RAYCASTLENGTH);
+        // Le raycast attache un objet cliqué
+        RaycastHit hitInfo;
+        Ray ray = GetComponentInChildren<Camera>().ScreenPointToRay(Input.mousePosition);
+        Debug.DrawRay (ray.origin, ray.direction * RAYCASTLENGTH, Color.blue);
+        bool rayCasted = Physics.Raycast (ray, out hitInfo, RAYCASTLENGTH);
 
-		if (rayCasted) 
-		{
-			rayCasted = hitInfo.transform.CompareTag("Draggable");
-		}
-		// rayCasted est true si un objet possédant le tag draggable est détécté
+        if (rayCasted) 
+        {
+            rayCasted = hitInfo.transform.CompareTag("Draggable");
+        }
+        // rayCasted est true si un objet possédant le tag draggable est détécté
 
-		if (Input.GetMouseButtonDown (0))	// L'utilisateur vient de cliquer
-		{
-			if (rayCasted) 
-			{
-				Debug.Log ("Object attached");
-				attachedObject = hitInfo.rigidbody;
-				attachedObject.isKinematic = true;
-				distanceToObj = hitInfo.distance;
-				Cursor.SetCursor (cursorDragged, hotSpot, cursorMode);
-			}
-		} 
+        if (Input.GetMouseButtonDown (0))	// L'utilisateur vient de cliquer
+        {
+            if (rayCasted) 
+            {
+                Debug.Log ("Object attached");
+                attachedObject = hitInfo.rigidbody;
+                attachedObject.isKinematic = true;
+                distanceToObj = hitInfo.distance;
+                Cursor.SetCursor (cursorDragged, hotSpot, cursorMode);
+            }
+        } 
 
-		else if (Input.GetMouseButtonUp (0) && attachedObject != null) 	// L'utilisateur relache un objet saisi
-		{
-			attachedObject.isKinematic = false;
-			attachedObject = null;
-			Debug.Log ("Object detached");
-			if (rayCasted) 
-			{
-				Cursor.SetCursor (cursorDraggable, hotSpot, cursorMode);
-			} 
-			else 
-			{
-				Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
-			}
-		} 
+        else if (Input.GetMouseButtonUp (0) && attachedObject != null) 	// L'utilisateur relache un objet saisi
+        {
+            attachedObject.isKinematic = false;
+            attachedObject = null;
+            Debug.Log ("Object detached");
+            if (rayCasted) 
+            {
+                Cursor.SetCursor (cursorDraggable, hotSpot, cursorMode);
+            } 
+            else 
+            {
+                Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
+            }
+        } 
 
-		if (Input.GetMouseButton (0) && attachedObject != null) // L'utilisateur continue la saisie d'un objet
-		{
-			attachedObject.MovePosition (ray.origin + (ray.direction * distanceToObj));
-		} 
+        if (Input.GetMouseButton (0) && attachedObject != null) // L'utilisateur continue la saisie d'un objet
+        {
+            attachedObject.MovePosition (ray.origin + (ray.direction * distanceToObj));
+        } 
 
-		else  // L'utilisateur bouge la sourie sans cliquer 
-		{
-			if (rayCasted) 
-			{
-				Cursor.SetCursor (cursorDraggable, hotSpot, cursorMode);
-			} 
-			else 
-			{
-				Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
-			}
-		}
+        else  // L'utilisateur bouge la sourie sans cliquer 
+        {
+            if (rayCasted) 
+            {
+                Cursor.SetCursor (cursorDraggable, hotSpot, cursorMode);
+            } 
+            else 
+            {
+                Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
+            }
+        }
 	}
 
     void OnMouseEnter()
