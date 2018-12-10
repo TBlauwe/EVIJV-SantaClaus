@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 64932423994370376}
   m_Layer: 0
   m_Name: Chair
-  m_TagString: Untagged
+  m_TagString: Draggable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,13 +36,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289134918400144}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.27541503, y: 0, z: 1.56}
-  m_LocalScale: {x: 0.50016505, y: 0.50016505, z: 0.50016505}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 11.599167, y: -1.7044704, z: 10.974}
+  m_LocalScale: {x: 0.5001655, y: 0.5001653, z: 0.5001653}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 180, z: 0}
 --- !u!23 &23723265748878540
 MeshRenderer:
   m_ObjectHideFlags: 1
