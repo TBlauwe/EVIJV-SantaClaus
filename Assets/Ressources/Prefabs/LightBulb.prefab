@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4513895127698202}
   - component: {fileID: 33853243783182234}
   - component: {fileID: 23376613580606576}
-  - component: {fileID: 108960035452904490}
   - component: {fileID: 114124394363513220}
+  - component: {fileID: 108143673510774002}
   m_Layer: 0
   m_Name: LightBulb
   m_TagString: Untagged
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060844331171202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7.29, y: -1.5400004, z: -15.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1060844331171202}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!108 &108960035452904490
+--- !u!108 &108143673510774002
 Light:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,8 +94,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 2
   m_Range: 1
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -108,8 +108,8 @@ Light:
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 1
-  m_Flare: {fileID: 12100000, guid: 9bdb18c49d114cb4300035184241aa39, type: 2}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
@@ -138,5 +138,6 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 1, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 1, g: 0.49803922, b: 0, a: 0}
+  intensity: 3
   delay: 0.1
-  startingIndex: 0
+  startingIndex: 1

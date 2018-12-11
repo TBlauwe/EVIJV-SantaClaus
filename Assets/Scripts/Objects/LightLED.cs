@@ -5,6 +5,7 @@ using UnityEngine;
 public class LightLED : MonoBehaviour {
 
     public List<Color> colors = new List<Color>(); // List of colors to be displayed one at a time
+    public float intensity = 3.0f; // Time per color
     public float delay = 1.0f; // Time per color
     public int startingIndex = 0;
 
@@ -31,6 +32,7 @@ public class LightLED : MonoBehaviour {
             startingIndex = 0;
         Color color = colors[startingIndex];
         material.SetColor("_Color", color);
+        material.SetColor("_EmissionColor", color*intensity);
         light.color = color;
         startingIndex++;
 
