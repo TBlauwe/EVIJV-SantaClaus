@@ -8,6 +8,7 @@ public class UseInitiatorScript : MonoBehaviour {
 	private Rigidbody attachedObject;	// Objet saisi, null si aucun objet saisi
 
 	public const int RAYCASTLENGTH = 100;	// Longueur du rayon issu de la caméra
+	public float ThrowPower = 100f;	// Longueur du rayon issu de la caméra
 
 	public CursorMode cursorMode = CursorMode.Auto;
 	public Vector2 hotSpot = new Vector2(16, 16);	// Offset du centre du curseur
@@ -37,7 +38,6 @@ public class UseInitiatorScript : MonoBehaviour {
         {
             if (rayCasted) 
             {
-                Debug.Log ("Object attached");
                 attachedObject = hitInfo.rigidbody;
                 attachedObject.isKinematic = true;
                 distanceToObj = hitInfo.distance;
@@ -49,7 +49,6 @@ public class UseInitiatorScript : MonoBehaviour {
         {
             attachedObject.isKinematic = false;
             attachedObject = null;
-            Debug.Log ("Object detached");
             if (rayCasted) 
             {
                 Cursor.SetCursor (cursorDraggable, hotSpot, cursorMode);
@@ -63,6 +62,21 @@ public class UseInitiatorScript : MonoBehaviour {
         if (Input.GetMouseButton (0) && attachedObject != null) // L'utilisateur continue la saisie d'un objet
         {
             attachedObject.MovePosition (ray.origin + (ray.direction * distanceToObj));
+        } 
+
+        if (Input.GetMouseButton (0) && Input.GetKeyDown(KeyCode.A) && attachedObject != null) 
+        {
+            if (rayCasted) 
+            {
+                Cursor.SetCursor (cursorDraggable, hotSpot, cursorMode);
+            } 
+            else 
+            {
+                Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
+            }
+            attachedObject.AddForce(ray.direction * ThrowPower); //this vector should be the player's forward vector
+            attachedObject.isKinematic = false;
+            attachedObject = null;
         } 
 
         else  // L'utilisateur bouge la sourie sans cliquer 

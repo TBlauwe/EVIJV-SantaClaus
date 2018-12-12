@@ -280,7 +280,9 @@ public class ModifiedOutputVolume : MonoBehaviour
                 break;
             case OutputType.Value:
                 value = Mathf.RoundToInt(Mathf.Lerp(MinValue, MaxValue, newScale));
+                float scaledValue = (value - MinValue) / (MaxValue - MinValue);
                 UIText.text = value.ToString();
+                UIText.color = Color.Lerp(MinColor, MaxColor, scaledValue);
                 break;
         }
 	}

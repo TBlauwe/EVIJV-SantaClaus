@@ -24,15 +24,22 @@ public class ScoreTracker : MonoBehaviour {
     public Text LostText;
     public Text WinText;
     public Text droppedGifts;
+    public TMPro.TextMeshPro maxNoise;
+    public TMPro.TextMeshPro dangerNoise;
     public GameObject panelWin;
     public GameObject panelLose;
     public GameObject NoiseSensor;
     public GameObject DropZone;
     public CharacterController controller;
+    public ModifiedOutputVolume volumeSensor;
 
     private void Start()
     {
         initialTimer = timer;
+        maxNoise.text = noiseThresholdLose.ToString();
+        dangerNoise.text = (noiseThresholdLose - 10).ToString();
+        volumeSensor.MinValue = 0;
+        volumeSensor.MaxValue = noiseThresholdLose;
     }
 
     private void Update()
