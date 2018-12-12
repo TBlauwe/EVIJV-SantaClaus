@@ -10,13 +10,13 @@ public class LightLED : MonoBehaviour {
     public int startingIndex = 0;
 
     private Material material;
-    private Light light;
+    private Light pointLight;
     private float lastSwitch;
 
 	// Use this for initialization
 	void Start () {
         material    = GetComponent<Renderer>().material;
-        light       = GetComponent<Light>();
+        pointLight  = GetComponent<Light>();
         switchColor();
 	}
 	
@@ -33,7 +33,7 @@ public class LightLED : MonoBehaviour {
         Color color = colors[startingIndex];
         material.SetColor("_Color", color);
         material.SetColor("_EmissionColor", color*intensity);
-        light.color = color;
+        pointLight.color = color;
         startingIndex++;
 
         lastSwitch = Time.time;

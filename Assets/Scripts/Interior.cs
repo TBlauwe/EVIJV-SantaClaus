@@ -6,6 +6,8 @@ public class Interior : MonoBehaviour {
 
     //| ========== Related to rain ==========
     public DigitalRuby.RainMaker.RainScript RainScript;
+    public float rainIntensityInInterior = 0.2f;
+    private float rainIntensityOutside;
 
     //| ========== Related to Player sound ==========
     public GameObject Player;
@@ -20,6 +22,7 @@ public class Interior : MonoBehaviour {
 	void Start () {
 
         //| ===== RAIN =====
+        rainIntensityOutside = RainScript.RainIntensity;
 
         //| ===== PLAYER SOUNDS =====
         FirstPersonScript = Player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();
@@ -36,6 +39,7 @@ public class Interior : MonoBehaviour {
         {
             //| ===== RAIN =====
             RainScript.FollowCamera = false;
+            RainScript.RainIntensity = rainIntensityInInterior;
 
             //| ===== PLAYER SOUNDS =====
             FirstPersonScript.m_FootstepSounds =  new AudioClip[] { footstepsInterior[0], footstepsInterior[1] };
@@ -50,6 +54,7 @@ public class Interior : MonoBehaviour {
         {
             //| ===== RAIN =====
             RainScript.FollowCamera = true;
+            RainScript.RainIntensity = rainIntensityOutside;
 
             //| ===== PLAYER SOUNDS =====
             FirstPersonScript.m_FootstepSounds =  new AudioClip[] { footstepsSnow[0], footstepsSnow[1] };
