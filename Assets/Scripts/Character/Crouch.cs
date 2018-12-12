@@ -6,6 +6,8 @@ public class Crouch : MonoBehaviour {
 
     public float height = 0.9f;
     public KeyCode key;
+    public float cameraHeightRelativeY = 0.5f;
+
     private CharacterController controller;
     private BoxCollider pushCollider;
     private float initialHeight;
@@ -35,15 +37,11 @@ public class Crouch : MonoBehaviour {
             cached_isCrouching = isCrouching;
             if (isCrouching)
             {
-                Debug.Log("Crouching ...");
-                    
                 controller.height = height;
                 pushCollider.size = new Vector3(pushCollider.size.x, height - 0.2f, pushCollider.size.z);
             }
             else
             {
-                Debug.Log("Not Crouching ...");
-
                 controller.height = initialHeight;
                 pushCollider.size = new Vector3(pushCollider.size.x, initialHeightPush, pushCollider.size.z);
             }
