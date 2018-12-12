@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 59324562511511514}
   - component: {fileID: 65118969163752828}
   - component: {fileID: 82694094060836938}
+  - component: {fileID: 114875333328410086}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -60,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843947700211688}
   m_LocalRotation: {x: -0.001101289, y: 0.7071065, z: 0.7071054, w: 0.0011010543}
-  m_LocalPosition: {x: 1.25, y: 0.5, z: 13.75}
+  m_LocalPosition: {x: -60.547783, y: 20.325403, z: -61.264374}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4989091990103448}
@@ -205,7 +206,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.2523017, y: 0.49999893, z: 13.0110035}
+  m_ConnectedAnchor: {x: -1.2476997, y: 0.4999981, z: 18.011005}
   m_UseSpring: 1
   m_Spring:
     spring: 20
@@ -372,3 +373,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114875333328410086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1626836007615454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb53721fa072be4e98c5340c0b44546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noiseLevel: {fileID: 0}
+  minNoiseLevel: 0
+  maxNoiseLevel: 10

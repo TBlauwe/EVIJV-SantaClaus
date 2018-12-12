@@ -16,7 +16,6 @@ public class NoiseLevel : MonoBehaviour {
 
     void Update()
     {
-        Debug.Log("Noise level : " + getNoiseLevel().ToString());
     }
 
     public float getNoiseLevel()
