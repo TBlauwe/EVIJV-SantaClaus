@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33490880249782562}
   - component: {fileID: 23424447227076722}
   - component: {fileID: 54313509638910616}
+  - component: {fileID: 65877783559983052}
   m_Layer: 0
   m_Name: RoofGround
   m_TagString: Untagged
@@ -35,9 +36,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1950455490942312}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -5, y: 3.75, z: 8.75}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 0.3749817}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -74.29778, y: 23.575403, z: -61.264374}
+  m_LocalScale: {x: 2.5, y: 2.499999, z: 0.37498158}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,3 +101,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &65877783559983052
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1950455490942312}
+  m_Material: {fileID: 13400000, guid: 3aeb7dadc0c69d54d9e5777e9d5631f1, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0126204, y: 1.0126202, z: 0.7999999}
+  m_Center: {x: 0.000000029802322, y: 0.0000033080578, z: 0.40000376}

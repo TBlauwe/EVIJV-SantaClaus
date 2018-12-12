@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DropZone : MonoBehaviour {
 
-    private int counter;
+    public int counter;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,6 @@ public class DropZone : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log(counter);
 	}
 
     private void OnTriggerEnter(Collider other)
