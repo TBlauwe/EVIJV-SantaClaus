@@ -471,7 +471,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &20349536 stripped
@@ -4120,7 +4121,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &223820760 stripped
@@ -4403,7 +4405,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &239410788 stripped
@@ -4563,7 +4566,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &254853137
@@ -8623,7 +8627,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &453757842 stripped
@@ -14389,7 +14394,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &726112793 stripped
@@ -16954,7 +16960,8 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &837979186
@@ -22401,7 +22408,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1143248556 stripped
@@ -36354,7 +36362,8 @@ Prefab:
       propertyPath: m_Name
       value: Table (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!4 &1781010026 stripped
@@ -38402,6 +38411,11 @@ Prefab:
     - target: {fileID: 4704474033201518, guid: 106297259e0901c40b19b01eb0e002d1, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82924534243004166, guid: 106297259e0901c40b19b01eb0e002d1,
+        type: 2}
+      propertyPath: Priority
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 106297259e0901c40b19b01eb0e002d1, type: 2}
@@ -41972,7 +41986,7 @@ MonoBehaviour:
   isEnabled: 1
   sourceType: 1
   audioSource: {fileID: 0}
-  sampleAmount: 256
+  sampleAmount: 512
   channel: 0
   attackDamp: 0.65
   decayDamp: 0.005
@@ -43163,7 +43177,8 @@ Prefab:
       propertyPath: noiseLevel
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114532694821051236, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &2132776157

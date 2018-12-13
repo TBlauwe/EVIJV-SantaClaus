@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 65042043640885752}
   - component: {fileID: 82924534243004166}
   - component: {fileID: 114441627674803038}
+  - component: {fileID: 114297737662203868}
   m_Layer: 0
   m_Name: Lampadaire
   m_TagString: Draggable
@@ -246,7 +247,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1574021621311132}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -277,6 +278,21 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114297737662203868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1440866524644890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f720316fe2f1ce46bad900ddd1d2e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_camera: {fileID: 0}
+  onToggle:
+  - {fileID: 8300000, guid: ba48291b55ade60409d777c18f10bdc1, type: 3}
+  - {fileID: 8300000, guid: 9b3b152b59ae97049a67a0a153331697, type: 3}
 --- !u!114 &114441627674803038
 MonoBehaviour:
   m_ObjectHideFlags: 1

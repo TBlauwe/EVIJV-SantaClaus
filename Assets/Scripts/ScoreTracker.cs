@@ -90,7 +90,7 @@ public class ScoreTracker : MonoBehaviour {
 
     private void checkIfGameOver()
     {
-        if((Mathf.RoundToInt((initialTimer - timer)%60) < 10)){
+        if((Mathf.RoundToInt((initialTimer - timer)%60) < 10) && Mathf.FloorToInt((initialTimer - timer)/60) == 0){
             return;
         }
 
