@@ -20,7 +20,7 @@ public class UseInitiatorScript : MonoBehaviour {
 		Cursor.SetCursor (cursorOff, hotSpot, cursorMode);
 	}
 	
-	void Update () 
+	void FixedUpdate () 
 	{
         // Le raycast attache un objet cliqué
         RaycastHit hitInfo;

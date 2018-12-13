@@ -6,12 +6,15 @@ namespace UnityStandardAssets.Utility
 {
     public class DragRigidbody : MonoBehaviour
     {
-        const float k_Spring = 50.0f;
-        const float k_Damper = 5.0f;
-        const float k_Drag = 10.0f;
-        const float k_AngularDrag = 5.0f;
-        const float k_Distance = 0.2f;
-        const bool k_AttachToCenterOfMass = false;
+
+        public Camera m_camera;
+
+        public float k_Spring = 50.0f;
+        public float k_Damper = 5.0f;
+        public float k_Drag = 10.0f;
+        public float k_AngularDrag = 5.0f;
+        public float k_Distance = 0.2f;
+        public bool k_AttachToCenterOfMass = false;
 
         private SpringJoint m_SpringJoint;
 
@@ -76,6 +79,7 @@ namespace UnityStandardAssets.Utility
             }
             if (m_SpringJoint.connectedBody)
             {
+                Debug.Log(m_SpringJoint.connectedBody);
                 m_SpringJoint.connectedBody.drag = oldDrag;
                 m_SpringJoint.connectedBody.angularDrag = oldAngularDrag;
                 m_SpringJoint.connectedBody = null;
@@ -85,10 +89,9 @@ namespace UnityStandardAssets.Utility
 
         private Camera FindCamera()
         {
-            if (GetComponent<Camera>())
-            {
-                return GetComponent<Camera>();
-            }
+            if (m_camera) { return m_camera; }
+
+            if (GetComponent<Camera>()){ return GetComponent<Camera>(); }
 
             return Camera.main;
         }

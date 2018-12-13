@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 59324562511511514}
   - component: {fileID: 65118969163752828}
   - component: {fileID: 82694094060836938}
-  - component: {fileID: 114875333328410086}
+  - component: {fileID: 114463004765641920}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -286,10 +286,11 @@ AudioSource:
   m_GameObject: {fileID: 1626836007615454}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1b630ea8358c15c47a753802dd2b4336, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 1d9bfcb87d0ba844e9071a1e60825ede,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: abd67dc5a8748418c9d7a7ef6f5eaeaa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.51
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -333,7 +334,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -373,7 +374,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114875333328410086
+--- !u!114 &114463004765641920
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -381,9 +382,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1626836007615454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abb53721fa072be4e98c5340c0b44546, type: 3}
+  m_Script: {fileID: 11500000, guid: fba854d724ca99246b6367542cbd4a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noiseLevel: {fileID: 0}
-  minNoiseLevel: 0
-  maxNoiseLevel: 10
+  impactSoundThreshold: 2
+  volumeMin: 0.2
+  volumeMax: 1
