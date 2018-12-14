@@ -1515,6 +1515,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114379572822069702, guid: 9455ac43c64f3b844a6b1001e531659c,
+        type: 2}
+      propertyPath: maxImpact
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114379572822069702, guid: 9455ac43c64f3b844a6b1001e531659c,
+        type: 2}
+      propertyPath: impactSoundThreshold
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9455ac43c64f3b844a6b1001e531659c, type: 2}
   m_IsPrefabAsset: 0
@@ -8145,8 +8155,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364678401}
-  - component: {fileID: 364678403}
   - component: {fileID: 364678402}
+  - component: {fileID: 364678403}
   m_Layer: 0
   m_Name: Push
   m_TagString: Untagged
@@ -8182,18 +8192,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &364678403
-BoxCollider:
+--- !u!136 &364678403
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 364678400}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c2815a7ab32e42c4bb42f59caacb8ec1, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.4, y: 1.6, z: 0.4}
-  m_Center: {x: 0, y: 0, z: -0.09}
+  m_Radius: 0.31
+  m_Height: 1.4
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.15, z: -0.2}
 --- !u!1001 &366990887
 Prefab:
   m_ObjectHideFlags: 0
