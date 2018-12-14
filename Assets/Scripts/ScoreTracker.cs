@@ -12,7 +12,7 @@ public class ScoreTracker : MonoBehaviour {
     public int      noiseThresholdLose;     // Lose when exceeding this threshold
     public int      numberOfGifts;          // Number of dropped gifts to win
     public int      scorePerGifts;          // 
-    public float    startupScreen;          //
+    public float    safeTime = 10.0f;          //
 
     private float   initialTimer;
     private float   finalScore;
@@ -47,8 +47,8 @@ public class ScoreTracker : MonoBehaviour {
 
     private void Update()
     {
-        if((initialTimer - timer) >= startupScreen || Input.anyKeyDown){ 
-            instructions.SetActive(false);
+        if(Input.anyKeyDown){ 
+           instructions.SetActive(false);
         }
 
         if (gameOver)
@@ -72,12 +72,15 @@ public class ScoreTracker : MonoBehaviour {
         {
             timer -= Time.deltaTime;
             if (timer <= 0f)
+            {
                 timer = 0f;
+                gameOver = true;
+            }
 
             checkIfGameOver();
             checkIfWon();
 
-            droppedGifts.text = getNumberOfDroppedGifts().ToString();
+            droppedGifts.text = string.Format("{0} / {1}", getNumberOfDroppedGifts(), numberOfGifts);
 
             computeScore();
         }
@@ -95,7 +98,7 @@ public class ScoreTracker : MonoBehaviour {
 
     private void checkIfGameOver()
     {
-        if((initialTimer - timer)/60 <= startupScreen){
+        if((initialTimer - timer) <= safeTime){
             return;
         }
 
