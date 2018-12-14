@@ -12,6 +12,7 @@ public class ScoreTracker : MonoBehaviour {
     public int      noiseThresholdLose;     // Lose when exceeding this threshold
     public int      numberOfGifts;          // Number of dropped gifts to win
     public int      scorePerGifts;          // 
+    public float    startupScreen;          //
 
     private float   initialTimer;
     private float   finalScore;
@@ -30,6 +31,7 @@ public class ScoreTracker : MonoBehaviour {
     public GameObject panelLose;
     public GameObject NoiseSensor;
     public GameObject DropZone;
+    public GameObject instructions;
     public CharacterController controller;
     public ModifiedOutputVolume volumeSensor;
 
@@ -40,24 +42,27 @@ public class ScoreTracker : MonoBehaviour {
         dangerNoise.text = (noiseThresholdLose - 10).ToString();
         volumeSensor.MinValue = 0;
         volumeSensor.MaxValue = noiseThresholdLose+10;
+        instructions.SetActive(true);
     }
 
     private void Update()
     {
+        if((initialTimer - timer) >= startupScreen || Input.anyKeyDown){ 
+            instructions.SetActive(false);
+        }
+
         if (gameOver)
         {
+            float minutes = Mathf.FloorToInt((initialTimer - timer)/60); 
+            float seconds = Mathf.RoundToInt((initialTimer - timer)%60);
             if (won)
             {
                 panelWin.SetActive(true);
-                float minutes = Mathf.FloorToInt((initialTimer - timer)/60); 
-                float seconds = Mathf.RoundToInt((initialTimer - timer)%60);
                 WinText.text = string.Format("You obtained {0} in {1} min and {2} sec", finalScore, minutes, seconds);
             }
             else
             {
                 panelLose.SetActive(true);
-                float minutes = Mathf.FloorToInt((initialTimer - timer)/60); 
-                float seconds = Mathf.RoundToInt((initialTimer - timer)%60);
                 LostText.text = string.Format("You obtained {0} in {1} min and {2} sec", finalScore, minutes, seconds);
             }
             controller.enabled = false;
@@ -90,7 +95,7 @@ public class ScoreTracker : MonoBehaviour {
 
     private void checkIfGameOver()
     {
-        if((Mathf.RoundToInt((initialTimer - timer)%60) < 10) && Mathf.FloorToInt((initialTimer - timer)/60) == 0){
+        if((initialTimer - timer)/60 <= startupScreen){
             return;
         }
 
