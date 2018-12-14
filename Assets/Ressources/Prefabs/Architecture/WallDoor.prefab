@@ -207,7 +207,7 @@ HingeJoint:
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.7389984, y: 0.5, z: 10}
-  m_UseSpring: 0
+  m_UseSpring: 1
   m_Spring:
     spring: 20
     damper: 5
