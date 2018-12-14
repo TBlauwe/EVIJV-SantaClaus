@@ -18,6 +18,7 @@ public class ScoreTracker : MonoBehaviour {
     private float   finalScore;
     private bool    gameOver    = false;                  
     private bool    won         = false;                  
+    private bool    playing     = false;                  
     private float   giftScore   = 0;                  
     private const string display = "{0} - {1}:{2}";
 
@@ -32,6 +33,7 @@ public class ScoreTracker : MonoBehaviour {
     public GameObject NoiseSensor;
     public GameObject DropZone;
     public GameObject instructions;
+    public GameObject UI3D;
     public CharacterController controller;
     public ModifiedOutputVolume volumeSensor;
 
@@ -43,12 +45,20 @@ public class ScoreTracker : MonoBehaviour {
         volumeSensor.MinValue = 0;
         volumeSensor.MaxValue = noiseThresholdLose+10;
         instructions.SetActive(true);
+        UI3D.SetActive(false);
     }
 
     private void Update()
     {
         if(Input.anyKeyDown){ 
            instructions.SetActive(false);
+            UI3D.SetActive(true);
+            playing = true;
+        }
+
+        if (!playing)
+        {
+            return;
         }
 
         if (gameOver)
