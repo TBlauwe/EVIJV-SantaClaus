@@ -274,7 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   impactSoundThreshold: 0.5
   volumeMin: 0
-  volumeMax: 1
+  volumeMax: 0.4
 --- !u!224 &224343691739591066
 RectTransform:
   m_ObjectHideFlags: 1
