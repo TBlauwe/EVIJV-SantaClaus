@@ -6,6 +6,7 @@ using UnityEngine;
 public class OnCollisionNoise : MonoBehaviour {
 
     public float impactSoundThreshold = 0.5f;
+    public float maxImpact = 10;
     public float volumeMin = 0;
     public float volumeMax = 1;
 
@@ -24,9 +25,8 @@ public class OnCollisionNoise : MonoBehaviour {
         if (collision.relativeVelocity.magnitude > impactSoundThreshold && !audioSource.isPlaying)
         {
             float min = impactSoundThreshold;
-            float max = impactSoundThreshold*4;
             float value = collision.relativeVelocity.magnitude;
-            float volume = Mathf.Lerp(volumeMin, volumeMax, (value - min) / (max - min));
+            float volume = Mathf.Lerp(volumeMin, volumeMax, (value - min) / (maxImpact - min));
             audioSource.volume = volume;
             audioSource.Play();
         }
