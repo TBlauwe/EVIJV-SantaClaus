@@ -9,7 +9,7 @@ public class Crouch : MonoBehaviour {
     public float cameraHeightRelativeY = 0.5f;
 
     private CharacterController controller;
-    private BoxCollider pushCollider;
+    private CapsuleCollider pushCollider;
     private float initialHeight;
     private float initialHeightPush;
     private bool isCrouching = false;
@@ -18,10 +18,10 @@ public class Crouch : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         controller = GetComponent<CharacterController>();
-        pushCollider = GetComponentInChildren<BoxCollider>();
+        pushCollider = GetComponentInChildren<CapsuleCollider>();
 
         initialHeight = controller.height;
-        initialHeightPush = pushCollider.size.y;
+        initialHeightPush = pushCollider.height;
 
         cached_isCrouching = isCrouching;
 	}
@@ -38,12 +38,12 @@ public class Crouch : MonoBehaviour {
             if (isCrouching)
             {
                 controller.height = height;
-                pushCollider.size = new Vector3(pushCollider.size.x, height - 0.2f, pushCollider.size.z);
+                pushCollider.height = height - 0.2f;
             }
             else
             {
                 controller.height = initialHeight;
-                pushCollider.size = new Vector3(pushCollider.size.x, initialHeightPush, pushCollider.size.z);
+                pushCollider.height = initialHeightPush;
             }
         }
 	}

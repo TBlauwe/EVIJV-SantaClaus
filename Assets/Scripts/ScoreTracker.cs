@@ -10,9 +10,11 @@ public class ScoreTracker : MonoBehaviour {
     public float    timer;                  // How much time left
 
     public int      noiseThresholdLose;     // Lose when exceeding this threshold
+    public int      reductionThreshold;     // Reduce max sound level when sound level is greater than this threshold
+    public int      reductionAmount;        // Amount of reduction
+    public bool     backToNormal;           // 
     public int      numberOfGifts;          // Number of dropped gifts to win
-    public int      scorePerGifts;          // 
-    public float    safeTime = 10.0f;          //
+    public float    safeTime = 10.0f;       //
 
     private float   initialTimer;
     private float   finalScore;
@@ -99,7 +101,12 @@ public class ScoreTracker : MonoBehaviour {
     private void computeScore()
     {
         score -= reductionPerSecond * Time.deltaTime;
-        giftScore = getNumberOfDroppedGifts() * scorePerGifts;
+        giftScore = 0;
+        foreach(GameObject go in DropZone.GetComponent<DropZone>().gifts)
+        {
+            giftScore = go.GetComponent<Gift>().value;
+        }
+
         float minutes = Mathf.FloorToInt(timer/60); 
         float seconds = Mathf.RoundToInt(timer%60);
         finalScore = score + giftScore;
@@ -111,17 +118,29 @@ public class ScoreTracker : MonoBehaviour {
         if((initialTimer - timer) <= safeTime){
             return;
         }
-
-        if(NoiseSensor.GetComponent<ModifiedOutputVolume>().getValue() >= noiseThresholdLose ||
-            timer <= 0f)
+        float noiseLevel = NoiseSensor.GetComponent<ModifiedOutputVolume>().getValue();
+        if(noiseLevel >= noiseThresholdLose || timer <= 0f)
         {
             gameOver = true;
+        }
+
+        if(noiseLevel >= reductionThreshold && backToNormal)
+        {
+            noiseThresholdLose -= reductionAmount;
+            maxNoise.text = noiseThresholdLose.ToString();
+            dangerNoise.text = (noiseThresholdLose - 10).ToString();
+            backToNormal = false;
+        }
+
+        if(noiseLevel < reductionThreshold)
+        {
+            backToNormal = true;
         }
     }
 
     private int getNumberOfDroppedGifts()
     {
-        return DropZone.GetComponent<DropZone>().counter;
+        return DropZone.GetComponent<DropZone>().gifts.Count;
     }
 
     private void checkIfWon()
