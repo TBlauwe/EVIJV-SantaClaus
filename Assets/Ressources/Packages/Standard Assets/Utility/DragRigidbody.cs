@@ -89,6 +89,7 @@ namespace UnityStandardAssets.Utility
             {
                 var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
                 m_SpringJoint.transform.position = ray.GetPoint(distance);
+                _particleSystem.transform.position = m_SpringJoint.connectedBody.transform.position;
                 yield return null;
             }
             if (m_SpringJoint.connectedBody)
