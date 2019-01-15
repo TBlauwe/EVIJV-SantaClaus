@@ -403,4 +403,5 @@ MonoBehaviour:
   volumeMin: 0
   volumeMax: 1
   destroy: 1
-  _particleSystem: {fileID: 0}
+  onDestroyPrefab: {fileID: 1568949768882428, guid: a8454f6ecb19d1646bba8feb6f413e38,
+    type: 2}
