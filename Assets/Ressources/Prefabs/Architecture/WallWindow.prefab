@@ -399,5 +399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactSoundThreshold: 0.5
+  maxImpact: 10
   volumeMin: 0
   volumeMax: 1
+  destroy: 1
+  _particleSystem: {fileID: 0}

@@ -386,5 +386,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   impactSoundThreshold: 1
+  maxImpact: 10
   volumeMin: 0.3
   volumeMax: 1
+  destroy: 1
+  onDestroyPrefab: {fileID: 1568949768882428, guid: a8454f6ecb19d1646bba8feb6f413e38,
+    type: 2}

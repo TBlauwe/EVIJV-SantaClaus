@@ -2011,6 +2011,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &89038059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4960777739675164, guid: 35e73b6dcd6312c4cbd629212cdf5fc8,
@@ -3186,6 +3188,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!224 &135250515 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224343691739591066, guid: fc31a736d47aa164e81af1c9f64cfbc4,
@@ -4533,6 +4537,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &205665083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422408, guid: 6d28f1735c7a56b4c9f7f52f843aa404,
@@ -5769,6 +5775,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &257137245 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 431358, guid: e2167d802c2e59744b95bb9abe897919,
@@ -6158,6 +6166,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &263322902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012197449570, guid: 01d2dd5255c308a4db25dbb77d9f65ea,
@@ -9581,6 +9591,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!1001 &435407927
 Prefab:
   m_ObjectHideFlags: 0
@@ -11573,6 +11585,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &525373924 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477640, guid: e60e2532315275146ba186b0e3797c9c,
@@ -11925,6 +11939,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &532877125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4110381588891008, guid: 40e7daa4a10ac704f8721b385573b8dc,
@@ -12668,6 +12684,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &559124913 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489564, guid: 307a3c2cd859c074dad96a275a69cbe0,
@@ -17623,6 +17641,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &780775316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 401328, guid: f544b8bc4e6a6b648ac6597f7f20a862,
@@ -22587,6 +22607,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!1001 &796727801
 Prefab:
   m_ObjectHideFlags: 0
@@ -26214,6 +26236,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &982750157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011275134666, guid: a6dbabfd6d3c8cb47b7243b0b8723af2,
@@ -27927,6 +27951,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1059264154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4513895127698202, guid: f7803b16059117842922ff64590e6c32,
@@ -28754,6 +28780,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1086745731 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415668, guid: 762715794c4733f4b9a55580ca38cdae,
@@ -31430,6 +31458,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1206737474 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 492508, guid: fb34890fd8bd962449d2a7899f98994a,
@@ -31768,6 +31798,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1217702185 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011275134666, guid: a6dbabfd6d3c8cb47b7243b0b8723af2,
@@ -33999,6 +34031,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1303069710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 425010, guid: d5ee025fccaa3e0449da6f09552d2d88,
@@ -34215,6 +34249,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!1001 &1312258933
 Prefab:
   m_ObjectHideFlags: 0
@@ -35374,6 +35410,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1339477588 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 403942, guid: e5b7c36b701cce94c9c8a11137907de1,
@@ -35722,6 +35760,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1358020446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 448912, guid: 3a5b959c62c28874f8f62743998675f1,
@@ -36216,6 +36256,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1375952564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 461124, guid: a694f484b39bd524faecfe7ad3eea7a9,
@@ -37677,6 +37719,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!1001 &1424913651
 Prefab:
   m_ObjectHideFlags: 0
@@ -41233,6 +41277,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!224 &1616103386 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224343691739591066, guid: fc31a736d47aa164e81af1c9f64cfbc4,
@@ -44032,6 +44078,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!1001 &1752271130
 Prefab:
   m_ObjectHideFlags: 0
@@ -46919,6 +46967,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1869856288 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 408410, guid: 2df63d60245f3d5448916136b34a40c7,
@@ -47901,6 +47951,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1916129486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 422798, guid: 9b4f7c48a6d12844fab6c27a026fa295,
@@ -48389,6 +48441,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4513895127698202, guid: f7803b16059117842922ff64590e6c32,
     type: 2}
   m_PrefabInternal: {fileID: 748452189}
+--- !u!1001 &1940753001
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.937477
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.21874
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636046761932116, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568949768882428, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8454f6ecb19d1646bba8feb6f413e38, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!4 &1940953627 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011275134666, guid: a6dbabfd6d3c8cb47b7243b0b8723af2,
@@ -48624,6 +48722,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!1001 &1949703259
 Prefab:
   m_ObjectHideFlags: 0
@@ -48830,6 +48930,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1949703267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 460488, guid: 65088a9146894db4bb010e41cf6b5fc8,
@@ -49453,6 +49555,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &1999650114 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4110381588891008, guid: 40e7daa4a10ac704f8721b385573b8dc,
@@ -51369,6 +51473,8 @@ MonoBehaviour:
   maxImpact: 10
   volumeMin: 0
   volumeMax: 0.25
+  destroy: 0
+  onDestroyPrefab: {fileID: 0}
 --- !u!4 &2080737912 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 432768, guid: 1e4b3bd06e444e54f9a6c16f68a246ab,
